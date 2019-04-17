@@ -25,7 +25,7 @@ $color-palettes: (
     )
 );
 
-// The css
+// Usage in app files
 .selector {
     background: palette(grey, light);
     color: palette(social, facebook);
