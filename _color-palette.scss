@@ -4,15 +4,31 @@
 /// @author andreimocanu
 ///
 /// @param {String} $color
-/// @param {String} $transition
+/// @param {String} $shade
 ///
 /// @example
+///   $color-palettes: (
+///      grey: (
+///         light    : #dedede,
+///         base     : #656565,
+///         dark     : #181818
+///      ),
+///      social: (
+///         gplus     : #DD4B39,
+///         facebook  : #3C5A99,
+///         twitter   : #28AAE1,
+///         pinterest : #CB222A,
+///         instagram : #d10869,
+///         linkedin  : #0084bf,
+///         youtube   : #EE3124,
+///         medium    : #292929
+///      )
+///   );
 ///   .selector {
-///     @include anim(0.2s, linear);
+///     background: palette(grey, light);
+///     color: palette(social, facebook);
 ///   }
 ///
-
-// Call the color palette modifiers in color values
 
 @function palette($palette, $shade: 'base') {
 	@return map-get(map-get($color-palettes, $palette), $shade);
